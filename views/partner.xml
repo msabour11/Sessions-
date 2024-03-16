@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+
+        <record model="ir.ui.view" id="partner_inherit_list_view">
+            <field name="name">contacts list</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Sessions attended">
+                        <group>
+                            <field name="is_instructor"/>
+                            <field name="session_ids"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+
+
+        <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="contact_action_window">
+            <field name="name">Contacts window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+        <!-- menu categories -->
+
+        <menuitem name="Configuration" id="Configuration_menu" parent="accademy.menu_root"/>
+
+        <menuitem name="Contacts" id="contacts_menu" parent="Configuration_menu"
+                  action="contact_action_window"/>
+
+    </data>
+</odoo>

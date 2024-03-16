@@ -1,0 +1,28 @@
+<odoo>
+    <record model="ir.ui.view" id="session_wizard_attendees">
+        <field name="name">session wizard</field>
+        <field name="model">accademy.wizard</field>
+        <field name="arch" type="xml">
+            <form string=" Add Attendees">
+
+                <group>
+                    <field name="session_id"/>
+                    <field name="attendee_ids"/>
+                </group>
+                <footer>
+                    <button string="Add attendee" name="add_attendee" type="object"
+                            class="oe_highlight" />
+                    <button string="Cancel" class="btn btn-secondary" special="cancel" data-hotkey="z"/>
+                </footer>
+
+            </form>
+        </field>
+    </record>
+<!--    <act_window id="launch_session_wizard"-->
+<!--                name="Add Attendees"-->
+<!--                binding_model="accademy.session"-->
+<!--                res_model="accademy.wizard"-->
+<!--                view_mode="form"-->
+<!--                target="new"/>-->
+
+</odoo>

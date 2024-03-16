@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+course_manager,course manager,model_accademy_accademy,group_manager,1,1,1,1
+session_manager,session manager,model_accademy_session,group_manager,1,1,1,1
+course_user,course user  ,model_accademy_accademy,accademy.group_user,1,1,1,0
+session_user,session user ,model_accademy_session,accademy.group_user,1,1,1,0
+course_read_all,course read all,model_accademy_accademy,,1,0,0,0
+session_read_all,session read all,model_accademy_session,,1,0,0,0
+session_wizard,session wizard,model_accademy_wizard,,1,1,1,1

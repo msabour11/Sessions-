@@ -1,0 +1,13 @@
+<odoo>
+    <record model="ir.rule" id="accademy_course_user_rule">
+        <!--        record rule for user group that show to each user only created courses-->
+        <field name="name">Show only courses Belonged to Responsible</field>
+        <field name="model_id" ref="model_accademy_accademy"/>
+        <field name="groups" eval="[(4, ref('accademy.group_user'))]"/>
+        <field name="perm_read" eval="0"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="domain_force">['|',('resposible_id', '=',user.id),('resposible_id','=',False)]</field>
+    </record>
+</odoo>
